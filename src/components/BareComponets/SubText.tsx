@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material"
 
-const HeaderText =  (props: any) => {
+const SubText =  (props: any) => {
     return <Typography  
     sx={{
         fontFamily :"Montserrat",
@@ -11,9 +11,9 @@ const HeaderText =  (props: any) => {
         letterSpacing: "0.2px",
         color: "#252B42"
     }}
-    variant="h2"
+    variant="body"
     {...props}
     />
 }
 
-export default HeaderText;
+export default SubText;

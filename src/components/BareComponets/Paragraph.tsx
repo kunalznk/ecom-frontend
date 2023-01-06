@@ -1,19 +1,20 @@
 import { Typography } from "@mui/material"
 
-const HeaderText =  (props: any) => {
+const Paragraph =  (props: any) => {
     return <Typography  
     sx={{
         fontFamily :"Montserrat",
-        fontWeight: 700,
-        fontSize:"40px",
-        lineHeight:"50px",
+        fontWeight: 400,
+        fontSize:"14px",
+        lineHeight:"20px",
         textAlign: "center",
         letterSpacing: "0.2px",
-        color: "#252B42"
+        color: "#737373",
+        ...props.sx
     }}
     variant="h2"
     {...props}
     />
 }
 
-export default HeaderText;
+export default Paragraph;
