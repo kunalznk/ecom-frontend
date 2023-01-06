@@ -1,6 +1,11 @@
-import { Typography } from "@mui/material"
+import { Typography, TypographyTypeMap } from "@mui/material"
+import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { ReactElement } from "react";
 
-const Paragraph =  (props: any) => {
+const Paragraph =  (props: any) : ReactElement<OverridableComponent<TypographyTypeMap<{}, "span">>> => {
+    const style = props.sx;
+    // delete props.sx;
+    console.log(props)
     return <Typography  
     sx={{
         fontFamily :"Montserrat",
@@ -10,7 +15,7 @@ const Paragraph =  (props: any) => {
         textAlign: "center",
         letterSpacing: "0.2px",
         color: "#737373",
-        ...props.sx
+        ...style
     }}
     variant="h2"
     {...props}

@@ -4,7 +4,7 @@ const SubText =  (props: any) => {
     return <Typography  
     sx={{
         fontFamily :"Montserrat",
-        fontWeight: 700,
+        fontWeight: 400,
         fontSize:"40px",
         lineHeight:"50px",
         textAlign: "center",
