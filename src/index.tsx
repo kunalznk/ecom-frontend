@@ -1,15 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from './theme';
+import { Provider } from 'react-redux';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import store from './store';
+import routes from './routes/index';
 
+const router = createBrowserRouter(routes)
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <ThemeProvider theme={theme}>
+    <RouterProvider router={router} />
+    </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 
