@@ -5,9 +5,9 @@ const registerApi = "http://localhost:4000/api/signup";
 
 /* user API  */
 
-const getUserApi = "http://localhost:4000/api/signin";
-const updateUserApi = "http://localhost:4000/api/signup";
-const deleteUserApi = "http://localhost:4000/api/signup";
+const getUserApi = "http://localhost:5000/api/user";
+const updateUserApi = "http://localhost:5000/api/user";
+const deleteUserApi = "http://localhost:5000/api/user";
 
 
 export default {

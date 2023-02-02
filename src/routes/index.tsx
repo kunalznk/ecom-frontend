@@ -4,6 +4,7 @@ import App from "../App"
 import Login from '../components/Login';
 import Register from '../components/Register';
 import NotFound from '../Pages/NotFound';
+import UserProfile from '../Pages/Profile';
 
 const routes: RouteObject[] = [
     {
@@ -19,6 +20,10 @@ const routes: RouteObject[] = [
             {
                 path: "signup",
                 element: <Register />
+            },
+            {
+                path: "user/me",
+                element: <UserProfile />
             }
         ]
     }

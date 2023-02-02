@@ -11,7 +11,7 @@ export const address = yup.object({
     addressType,
     isDefault
 })
-
+export type addressType = InferType<typeof address>
 export const CreateUserInputSchema = yup.object({
     firstName,
     lastName,
@@ -30,7 +30,7 @@ export type loginUserType = InferType<typeof LoginInputSchema>
 
 
 export const UserSchema = CreateUserInputSchema.shape({
-    address: yup.array().of(address).min(0),
-    id
+  _id: id,
+  address: yup.array().of(address).min(0),
 })
 export type userType = InferType<typeof UserSchema>

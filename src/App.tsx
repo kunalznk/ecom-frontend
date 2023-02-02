@@ -14,6 +14,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import { useAppSelector } from "./store/hooks";
 import { Outlet, Route, Routes } from "react-router-dom";
+import UserProfile from "./Pages/Profile";
 
 function App() {
 

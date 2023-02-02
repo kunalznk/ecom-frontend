@@ -20,6 +20,7 @@
     "axios": "^1.2.4",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
+    "react-animate-height": "^3.1.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.42.1",
     "react-material-ui-carousel": "^3.4.2",

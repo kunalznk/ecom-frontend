@@ -15,6 +15,7 @@ const FormInput = (
 }
 ) => {
     const { register, name } = props;
+    const registeredValues = Boolean(register) ? { ...register(name) } : {}
     return <>
         <Grid container flexDirection="column" gap="0.4rem" minWidth="260px">
             <Grid item>
@@ -24,7 +25,7 @@ const FormInput = (
             </Grid>
         <Grid item>
             <TextField
-                { ...register(name) }
+                { ...registeredValues }
                 {...props}
                 fullWidth
                 sx={{  gap:"0.2rem"   }}

@@ -25,7 +25,7 @@ const initialState : userSliceType = {
         password:"",
     },
     user:{
-        id:"",
+        _id:"",
         firstName:"",
         lastName:"",
         emailId:"",
@@ -38,7 +38,7 @@ const initialState : userSliceType = {
 
 const reducers : SliceCaseReducers<userSliceType> =  {
     setUser : (state , action: PayloadAction<userType>) => {
-        state.user = {...state.user, ...action.payload}
+        state.user = {...state.user, ...action.payload, ...{address: action.payload.address ?? [] } }
     },
     setLoginForm : (state , action: PayloadAction<loginUserType>) => {
         state.loginForm = {...state.loginForm, ...action.payload}
@@ -63,7 +63,8 @@ export const loginThunk = createAsyncThunk("login" , async  ( loginForm: loginUs
     dispatch(userActions.setLoginForm(initialState.loginForm));
 
     if( res.status === 200 &&  res.data?.status === "SUCCESS") {
-        localStorage.setItem("token", res.data.data.token);
+      localStorage.setItem("token", res.data.data.token);
+      console.log(res.data.data.token);
         return fulfillWithValue(res.data.data);
     } else return  rejectWithValue(res.data.error?.message ?? "Something went wrong")
 
@@ -86,25 +87,25 @@ export const registerThunk = createAsyncThunk("register" , async  ( registerForm
   }
 });
 
-export const getCurrentUserThunk = createAsyncThunk("login" , async  ( _args ,{ getState , rejectWithValue, fulfillWithValue, dispatch  }) => {
+export const getCurrentUserThunk = createAsyncThunk("getCurrentUser" , async  ( _args ,{ getState , rejectWithValue, fulfillWithValue, dispatch  }) => {
     try {
     const res = await axios.get(api.getUserApi );
-    if( res.status === 200 ) {
-        dispatch(userActions.setUser(res.data))
-    } else rejectWithValue(res)
-  } catch(e) { 
-    rejectWithValue(e)
-  }
+    if( res.status === 200 && res.data?.status === "SUCCESS" ) {
+        dispatch(userActions.setUser(res.data?.data))
+      } else return rejectWithValue(res.data.error?.message ?? "Something went wrong")
+    } catch(e:any ) { 
+      return rejectWithValue(e?.message  ?? "General server error")
+    }
 });
 
-export const updateUserByIdThunk = createAsyncThunk("login" , async  ( updateUser ,{ getState , rejectWithValue, fulfillWithValue, dispatch  }) => {
+export const updateUserByIdThunk = createAsyncThunk("updateUser" , async  ( updateUser: userType ,{ getState , rejectWithValue, fulfillWithValue, dispatch  }) => {
     try {
     const res = await axios.patch(api.updateUserApi , updateUser);
     if( res.status === 200 ) {
         dispatch(userActions.setUser(res.data))
-    } else rejectWithValue(res)
-  } catch(e) { 
-    rejectWithValue(e)
+    } else return rejectWithValue(res.data.error?.message ?? "Something went wrong")
+  } catch(e:any ) { 
+    return rejectWithValue(e?.message  ?? "General server error")
   }
 });
 
