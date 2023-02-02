@@ -39,7 +39,6 @@ const Filters = (props:any) => {
    sx={{width:"50%"}}
    
  >
-     <Paper sx={{width:"100%"}} >
     <Grid container justifyContent="center" maxWidth="xl" padding="2%">
     {[1,2,3,4].map(() => <FilterCard />)}
     <Grid item container gap="10px" justifyContent="space-around">
@@ -48,8 +47,6 @@ const Filters = (props:any) => {
     </Grid>
     
     </Grid>
-    </Paper>
-
  </Popper >    
    
 }

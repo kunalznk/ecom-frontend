@@ -5,6 +5,7 @@ import Login from '../components/Login';
 import Register from '../components/Register';
 import NotFound from '../Pages/NotFound';
 import UserProfile from '../Pages/Profile';
+import ProductList from '../Pages/ProductList';
 
 const routes: RouteObject[] = [
     {
@@ -24,6 +25,10 @@ const routes: RouteObject[] = [
             {
                 path: "user/me",
                 element: <UserProfile />
+            },
+            {
+                path: "products",
+                element: <ProductList />
             }
         ]
     }

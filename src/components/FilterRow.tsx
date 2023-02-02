@@ -1,7 +1,8 @@
-import { Box, Button, Container, FormControl, Grid, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import { Box, Button, Card, Container, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Typography } from "@mui/material";
+import FormInput from "./FormInput";
 
 const FilterRow = (props: any) => {
-    return <Container maxWidth="lg">
+    return <Container maxWidth="lg" component={Paper} sx={{padding: "15px"}}>
         <Grid container justifyContent="center">
         <Grid item container justifyContent="space-between" maxWidth="xl">
             <Grid item>
@@ -16,8 +17,7 @@ const FilterRow = (props: any) => {
             </Grid>
             <Grid item>
                 <Grid container gap="5px">
-                    <FormControl sx={{ width: "141px" }}>
-                        <InputLabel>Popularity</InputLabel>
+                    <FormControl >
                         <Select>
                             <MenuItem value={10}>Ten</MenuItem>
                             <MenuItem value={20}>Twenty</MenuItem>
@@ -28,9 +28,7 @@ const FilterRow = (props: any) => {
                         props.setAnchorEl(e.currentTarget);
                     }}>Filter</Button>
                 </Grid>
-
-
-            </Grid>
+                </Grid>
         </Grid>
         </Grid>
     </Container>
