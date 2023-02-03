@@ -24,12 +24,10 @@ const ProductCard = () => {
             </Grid>
                         </Grid>
                         <Grid item>
-            <Typography variant="h5">Graphic Design</Typography>
-
+                             <Typography variant="h5">Graphic Design</Typography>
                         </Grid>
                         <Grid item> 
-            <Typography variant="body1" maxWidth="280px">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</Typography>
-
+                                <Typography variant="body1" maxWidth="280px">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</Typography>
                         </Grid>
             <Grid item container justifyContent="flex-start" alignItems="center" gap="4px">
             <Grid item  sx={{ borderRadius:"10px"}}>

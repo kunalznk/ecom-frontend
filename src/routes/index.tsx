@@ -6,6 +6,7 @@ import Register from '../components/Register';
 import NotFound from '../Pages/NotFound';
 import UserProfile from '../Pages/Profile';
 import ProductList from '../Pages/ProductList';
+import ProductPage from '../Pages/ProductPage';
 
 const routes: RouteObject[] = [
     {
@@ -29,6 +30,12 @@ const routes: RouteObject[] = [
             {
                 path: "products",
                 element: <ProductList />
+
+            },
+            {
+                path: "products/:productId",
+                element: <ProductPage />
+                
             }
         ]
     }

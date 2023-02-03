@@ -4,6 +4,7 @@ import FavoriteBorderTwoToneIcon from '@mui/icons-material/FavoriteBorderTwoTone
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import VisibilityTwoToneIcon from '@mui/icons-material/VisibilityTwoTone';
 import Carousel from "react-material-ui-carousel";
+import { Container } from "@mui/system";
 
 
 const Product = () => {
@@ -11,13 +12,15 @@ const Product = () => {
     const productImages = [1,2,3,4]
     return <>
             <Grid item container justifyContent="center" padding="2%" gap="5%" >
-            <Grid item>
+                <Container maxWidth="lg">
+                    <Grid container justifyContent="space-evenly">
+                <Grid item>
                     <Carousel
                     sx={{ maxWidth:"600px" , maxHeight:"646px", minWidth: "348px" ,minHeight: "277px"}} 
                     >
                         {
                             productImages.map( () =>  <img 
-                            src="https://i.picsum.photos/id/469/506/450.jpg?hmac=30EQmIUnlWpGcR0rTDpPtgKsETrU6CrETKGXGsnH9nY"
+                            src="https://images.pexels.com/photos/1292770/pexels-photo-1292770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             style={{maxWidth:"506px" , maxHeight:"450px" , minWidth: "318px" ,minHeight: "227px", objectFit: "contain"}}/>)
                         }
                     </Carousel>
@@ -61,6 +64,9 @@ const Product = () => {
         </Grid>
         </Grid>
             </Grid>
+            </Grid>
+                </Container>
+           
     </Grid>
     </>
 }

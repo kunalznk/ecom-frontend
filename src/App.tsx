@@ -21,9 +21,11 @@ function App() {
   const { loading , error } = useAppSelector((state) => state.entities.app);
   
   return (
-    <Box sx={{flexGrow: 1, display:"flex" , flexDirection:"column",   justifyContent:"center" ,  alignItems:"center" ,minHeight:"100vh"}}>
+    <Box 
+    // sx={{ display:"flex" , flexDirection:"column",  alignItems:"center" ,minHeight:"100vh"}}
+    >
       {Boolean(error.message) && <Alerts open={Boolean(error.message)} severity={error.severity} message={error.message}/>}
-        {/* <Header /> */}
+        <Header />
         {/* <Home /> */}
         {/* <ProductPage/> */}
         {/* <ProductList /> */}

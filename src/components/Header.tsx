@@ -1,14 +1,16 @@
-import { AppBar, Badge, Box, IconButton, TextField, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box, Container, IconButton, Paper, TextField, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import { Outlet } from 'react-router-dom';
+import Footer from "./Footer";
 
 
 const Header = () => {
     return <>
-    <AppBar position="relative" sx={{marginBottom:"10px"}}>
+    <AppBar position="static">
         <Toolbar>
         <IconButton
             size="large"

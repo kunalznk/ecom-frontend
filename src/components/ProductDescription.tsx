@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, Container, Grid, Tab, Tabs, Typography } from "@mui/material";
 
 
 const ProductDescription = () => {
@@ -6,17 +6,19 @@ const ProductDescription = () => {
         <Grid container flexDirection="column" gap="50px">
             <Grid item container>
                 <Grid container justifyContent="center" alignItems="center" gap="2%">
-                    <Box><Typography variant="subtitle2" color="grey">Description</Typography></Box>
-                    <Box><Typography variant="subtitle2" color="grey">Additional Information</Typography></Box>
-                    <Box><Typography variant="subtitle2" color="grey">Reviews 10</Typography></Box>
-                </Grid>
+                    <Tabs>
+                    <Tab icon={<Typography variant="subtitle2" color="grey">Description</Typography>} /> 
+                    <Tab icon={<Typography variant="subtitle2" color="grey">Additional Information</Typography>} /> 
+                    <Tab icon={<Typography variant="subtitle2" color="grey">Reviews 10</Typography>} /> 
+                    </Tabs>
+                    </Grid>
             </Grid>
         
             <Grid item container  justifyContent="center" gap="4%">
             <Grid item>
             <img 
-                        src="https://i.picsum.photos/id/370/183/162.jpg?hmac=hV-bZzzDsHBCkSHl-cw3JxcbPnu3mQrdI-EnpIetio0"
-                        style={{maxWidth: "332px" , maxHeight: "372px" ,minWidth: "321px", minHeight:"271px" }}
+         src="https://images.pexels.com/photos/1292770/pexels-photo-1292770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+         style={{maxWidth: "332px" , maxHeight: "372px" ,minWidth: "321px", minHeight:"271px" }}
                         />
             </Grid>
                 
