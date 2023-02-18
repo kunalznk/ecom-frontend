@@ -7,6 +7,7 @@ const ConfirmModal = () => {
     
 
     return <>
+        <Container style={{border: "24px solid red"}}>
         <Modal
         open={true}
         >
@@ -28,12 +29,10 @@ const ConfirmModal = () => {
         </Grid>
         </Container>
         </Modal>
-        
-        
+        </Container>
+
        
-        
-       
-    </>
+        </>
 }
 
 export default ConfirmModal;

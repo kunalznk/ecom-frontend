@@ -1,5 +1,5 @@
 const SUCCESS_MESSAGES : {[key : string ]: string }= {
-"login/fulfilled" : "Login Successfully !",
+"login/fulfilled" : "Login Successfully ! ",
 "register/fulfilled" : "Register Successfully !"
 }
 export {

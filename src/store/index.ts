@@ -3,12 +3,16 @@ import thunk from 'redux-thunk';
 
 import { userReducer } from './userSlice';
 import { appReducer } from './appSlice';
+import { productReducer } from './productSlice';
+import { orderReducer } from './orderSlice';
 
 const store = configureStore({
     reducer:{
         entities: combineReducers({
             user: userReducer,
-            app: appReducer
+            app: appReducer,
+            product: productReducer,
+            order: orderReducer
         })
     },
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),

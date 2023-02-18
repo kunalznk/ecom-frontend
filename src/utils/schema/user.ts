@@ -1,6 +1,6 @@
 import * as yup from "yup";
 import { InferType } from "yup"
-import { firstName ,lastName , emailId, phoneNumber, password, role, addressLine1 ,addressLine2, city, state, pinCode , addressType , isDefault , id} from "./yup"
+import { firstName ,lastName , emailId, phoneNumber, password, role, addressLine1 ,addressLine2, city, state, pinCode , addressType as ad , isDefault , id} from "./yup"
 
 export const address = yup.object({
     addressLine1,
@@ -8,7 +8,7 @@ export const address = yup.object({
     city,
     state,
     pinCode,
-    addressType,
+    addressType: ad,
     isDefault
 })
 export type addressType = InferType<typeof address>

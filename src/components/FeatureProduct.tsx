@@ -1,8 +1,11 @@
 import { Typography, Grid, Container } from "@mui/material";
 import ProductCard from "./ProductCard";
 import ContentCard from './ContentCard';
+import { useAppSelector } from "../store/hooks";
 
 const FeatureProduct = () => {
+
+    const  {products}  = useAppSelector(state => state.entities.product);
     return <Container maxWidth="lg">
         <Grid container flexDirection="column" alignItems="center" gap="30px">
             <Grid item>
@@ -13,7 +16,7 @@ const FeatureProduct = () => {
                 </Grid>
             </Grid>
             <Grid item container  justifyContent="space-evenly" gap="20px">
-                {[1, 2, 3, 4].map(() => <ContentCard />)}
+                {products.slice(0,4).map((product) => <ContentCard product={product}/>)}
             </Grid>
         </Grid>
 

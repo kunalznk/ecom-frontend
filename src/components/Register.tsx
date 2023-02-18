@@ -36,50 +36,142 @@ const Register = () => {
       const registerUser = () => { dispatch(registerThunk(registerForm)); reset(); }
 
     return <>
-    <Container maxWidth="xl"  sx={{padding:"2%" , borderRadius:"1rem"}}>
-        <Container maxWidth="lg">
-        <form onSubmit={handleSubmit(registerUser)}>
-        <Grid container component={Paper}  justifyContent="flex-start" gap="2rem"  padding="3rem"  sx={{borderRadius:"1rem" }} maxWidth="630px">
-        <Grid item>
-        <Typography variant="h1" color="#23A6F0">Reigster Here</Typography></Grid>
-        <Grid item container flexDirection="column">
-        <Typography variant="h4">Welcome</Typography>
-        <Typography variant="h2">Sign up</Typography>
-        </Grid>
-        <Grid item container flexDirection="column">
-            <Grid item container gap="2%">
-            <Grid item> 
-            <FormInput name="firstName" inputLabel="First Name"  placeholder="First Name"   error={Boolean(errors.firstName)} errormsg={errors?.firstName?.message  ??  " "}  value={registerForm.firstName} register={register}  onChange={(e) => onChangeField(e)} />
-            </Grid>
-            <Grid item> 
-                <FormInput  name="lastName" inputLabel ="Last Name" placeholder="Last Name"  error={Boolean(errors.lastName)} errormsg={errors?.lastName?.message ?? " "}  value={registerForm.lastName} register={register}  onChange={(e) => onChangeField(e)} /> 
-                </Grid>
-            </Grid>
+    <div className="app-content">
 
-            <Grid item container  gap="2%">
-            <Grid item><FormInput name="emailId" inputLabel ="Email ID *" placeholder="Email ID *"  error={Boolean(errors.emailId)} errormsg={errors?.emailId?.message ?? " "}  value={registerForm.emailId} register={register}  onChange={(e) => onChangeField(e)} /></Grid>
-            <Grid item><FormInput name="password" inputLabel ="Password" placeholder="Password"  error={Boolean(errors.password)} errormsg={errors?.password?.message ?? " "}  value={registerForm.password} register={register}  onChange={(e) => onChangeField(e)} /></Grid>
-            </Grid>
+            
+<div className="u-s-p-y-60">
 
-            <Grid item container  gap="2%">
-            <Grid item><FormInput name="phoneNumber" inputLabel ="Mobile" placeholder="1234567890"  error={Boolean(errors.phoneNumber)} errormsg={errors?.phoneNumber?.message ?? " "}  value={registerForm.phoneNumber} register={register}  onChange={(e) => onChangeField(e)} /></Grid>
-            <Grid item><FormInput name="role" inputLabel ="Role" placeholder="Select a Role"  error={Boolean(errors.role)} errormsg={errors?.role?.message ?? " "}  value={registerForm.role} register={register}  onChange={(e) => onChangeField(e)} /></Grid>
-            </Grid>
-       </Grid>
-        <Grid item container justifyContent="center">
-        <Button variant="contained" type="submit" sx={{width:"180px" , borderRadius:"1rem"}}> SIGN UP  </Button>
-        </Grid>
-        <Grid item container justifyContent="center" alignItems="center" gap="5px">
-        <Typography variant="subtitle2" sx={{color:"grey"}}>have an account ? /</Typography>
-        <RouteLink to="/signin">
-        <Link variant="subtitle2" underline="hover" sx={{cursor:"pointer"}} >Log in</Link>
-        </RouteLink>
-          </Grid>
-    </Grid>
-    </form>
-        </Container>
     
-    </Container>
+    <div className="section__content">
+        <div className="container">
+            <div className="breadcrumb">
+                <div className="breadcrumb__wrap">
+                    <ul className="breadcrumb__list">
+                        <li className="has-separator">
+
+                            <a href="index.html">Home</a></li>
+                        <li className="is-marked">
+
+                            <a href="signup.html">Signup</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div className="u-s-p-b-60">
+
+    
+    <div className="section__intro u-s-m-b-60">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="section__text-wrap">
+                        <h1 className="section__heading u-c-secondary">CREATE AN ACCOUNT</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    <div className="section__content">
+        <div className="container">
+            <div className="row row--center">
+                <div className="col-lg-6 col-md-8 u-s-m-b-30">
+                    <div className="l-f-o">
+                        <div className="l-f-o__pad-box">
+                            <h1 className="gl-h1">PERSONAL INFORMATION</h1>
+                            <form className="l-f-o__form">
+                                <div className="gl-s-api">
+                                    <div className="u-s-m-b-15">
+
+                                        <button className="gl-s-api__btn gl-s-api__btn--fb" type="button"><i className="fab fa-facebook-f"></i>
+
+                                            <span>Signup with Facebook</span></button></div>
+                                    <div className="u-s-m-b-30">
+
+                                        <button className="gl-s-api__btn gl-s-api__btn--gplus" type="button"><i className="fab fa-google"></i>
+
+                                            <span>Signup with Google</span></button></div>
+                                </div>
+                                <div className="u-s-m-b-30">
+
+                                    <label className="gl-label" htmlFor="reg-fname">FIRST NAME *</label>
+
+                                    <input className="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="First Name" /></div>
+                                <div className="u-s-m-b-30">
+
+                                    <label className="gl-label" htmlFor="reg-lname">LAST NAME *</label>
+
+                                    <input className="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Last Name" /></div>
+                                <div className="gl-inline">
+                                    <div className="u-s-m-b-30">
+
+                                        
+
+                                        <span className="gl-label">BIRTHDAY</span>
+                                        <div className="gl-dob"><select className="select-box select-box--primary-style">
+                                                <option selected>Month</option>
+                                                <option value="male">January</option>
+                                                <option value="male">February</option>
+                                                <option value="male">March</option>
+                                                <option value="male">April</option>
+                                            </select><select className="select-box select-box--primary-style">
+                                                <option selected>Day</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                            </select><select className="select-box select-box--primary-style">
+                                                <option selected>Year</option>
+                                                <option value="1991">1991</option>
+                                                <option value="1992">1992</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1994">1994</option>
+                                            </select></div>
+                                        
+                                    </div>
+                                    <div className="u-s-m-b-30">
+
+                                        <label className="gl-label" htmlFor="gender">GENDER</label><select className="select-box select-box--primary-style u-w-100" id="gender">
+                                            <option selected>Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="male">Female</option>
+                                        </select></div>
+                                </div>
+                                <div className="u-s-m-b-30">
+
+                                    <label className="gl-label" htmlFor="reg-email">E-MAIL *</label>
+
+                                    <input className="input-text input-text--primary-style" type="text" id="reg-email" placeholder="Enter E-mail" /></div>
+                                <div className="u-s-m-b-30">
+
+                                    <label className="gl-label" htmlFor="reg-password">PASSWORD *</label>
+
+                                    <input className="input-text input-text--primary-style" type="text" id="reg-password" placeholder="Enter Password" /></div>
+                                <div className="u-s-m-b-15">
+
+                                    <button className="btn btn--e-transparent-brand-b-2" type="submit">CREATE</button></div>
+
+                                <a className="gl-link" href="#">Return to Store</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
     </>
     
      

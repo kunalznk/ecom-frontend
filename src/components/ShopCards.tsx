@@ -5,11 +5,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const ShopCards = (props:any) => {
     return <>
-       <Container maxWidth="xl" sx={{ minHeight:"320px"}}>
-            <Grid container gap="10px" justifyContent="center" flexDirection="row" {...props}>
-                <Grid container item xs={12} sm={12} md={5.9} lg={5.9} xl={5.9}>
+            <Grid container gap="10px" flexGrow={1} justifyContent="space-between" flexDirection="row" {...props}>
+                <Grid container item xs={12} sm={12} md={5.9} lg={5.9} xl={5.9} sx={{backgroundColor: "white" , padding: "5px"}}>
                 <Container maxWidth="xl" sx={{ background:  "url(https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80)" , minHeight:"320px" , backgroundSize:"cover" }}>
-                <Grid container flexDirection="column" gap="15px">
+                <Grid data-aos="fade-down" container flexDirection="column" gap="15px">
             <Typography variant="h6" color="#E77C40">Product</Typography>
             <Typography variant="h2" color="white">Featured</Typography>
             <Typography variant="h3" color="white">Top Ten Products of the week</Typography>
@@ -19,18 +18,18 @@ const ShopCards = (props:any) => {
                 </Grid>
                 <Grid container flexDirection="column" item xs={12} sm={12} md={5.9} lg={5.9} xl={5.9} gap="10px">
                 <Grid container item justifyContent="space-between"gap="10px" >
-                <Grid item container xs={12} sm={12} md={5.9} lg={5.9} xl={5.9} >
+                <Grid item container xs={12} sm={12} md={5.9} lg={5.9} xl={5.9} sx={{backgroundColor: "white" , padding: "5px"}}>
                 <Container maxWidth="xl" component={Card} sx={{background: "url(https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8TGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60)" ,  backgroundSize:"cover"}}>
-                <Grid container flexDirection="column" gap="15px">
+                <Grid data-aos="fade-down" container flexDirection="column" gap="15px">
             <Typography variant="h6" color="#E77C40">Product</Typography>
             <Typography variant="h2" color="white">Featured</Typography>
             <Typography variant="h3" color="white">Top Ten Products of the week</Typography>
             <Typography variant="h6" color="white">Explore terms</Typography>
             </Grid>
         </Container>
-                </Grid> <Grid item xs={12} sm={12} md={5.9} lg={5.9} xl={5.9}>
+                </Grid> <Grid item xs={12} sm={12} md={5.9} lg={5.9} xl={5.9} sx={{backgroundColor: "white" , padding: "5px"}}>
                 <Container maxWidth="xl" component={Card} sx={{background: "url(https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80)" , backgroundSize:"cover"}}>
-                <Grid container flexDirection="column" gap="15px">
+                <Grid data-aos="fade-down" container flexDirection="column" gap="15px">
             <Typography variant="h6" color="#E77C40">Product</Typography>
             <Typography variant="h2" color="white">Featured</Typography>
             <Typography variant="h3" color="white">Top Ten Products of the week</Typography>
@@ -39,9 +38,9 @@ const ShopCards = (props:any) => {
         </Container>
                 </Grid>
                         </Grid>
-                        <Grid item>
+                        <Grid item sx={{backgroundColor: "white" , padding: "5px"}}>
                         <Container maxWidth="xl" component={Card} sx={{background: "url(https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=990&q=80)" , backgroundSize:"cover" , backgroundPosition:"bottom"}}>
-                        <Grid container flexDirection="column" gap="15px">
+                        <Grid data-aos="fade-down" container flexDirection="column" gap="15px">
                     <Typography variant="h6" color="#E77C40">Product</Typography>
                     <Typography variant="h2" color="white">Featured</Typography>
                     <Typography variant="h3" color="white">Top Ten Products of the week</Typography>
@@ -51,7 +50,6 @@ const ShopCards = (props:any) => {
                         </Grid>
                 </Grid>
                 </Grid>
-        </Container>
     </>
 }
 export default ShopCards;

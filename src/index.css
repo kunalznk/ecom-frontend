@@ -5,11 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:    linear-gradient(to left, rgba(245, 246, 252, 0.52) 10%, rgb(252 36 36 / 58%) ) ,  
-  url("./images/backgroundImage.png");
   /* url("https://www.metrofieldguide.com/wp-content/uploads/2021/02/f0d237d6db6d2627eefc1cdf57797b3c-1-1024x576.jpg"); */
-  background-repeat: no-repeat;
-   background-position:right;
+  /* background-repeat: no-repeat;
+   background-position:right; */
+   background-color: #E3E6E6;
+   scroll-behavior: smooth;
 }
 
 code {
