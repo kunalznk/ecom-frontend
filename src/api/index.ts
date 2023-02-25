@@ -5,15 +5,15 @@ const registerApi = "http://localhost:3005/api/signup";
 
 /* user API  */
 
-const getUserApi = "http://localhost:3008/api/user";
-const updateUserApi = "http://localhost:3008/api/user";
-const deleteUserApi = "http://localhost:3008/api/user";
+const getUserApi = "http://localhost:3006/api/user";
+const updateUserApi = "http://localhost:3006/api/user";
+const deleteUserApi = "http://localhost:3006/api/user";
 
 /* product api  */
 
-const getProductsApi = "http://localhost:3006/api/products";
-const getProductByIdApi = "http://localhost:3006/api/products";
-const getFilterProductsApi = "http://localhost:3006/api/products";
+const getProductsApi = "http://localhost:3007/api/products";
+const getProductByIdApi = "http://localhost:3007/api/products";
+const getFilterProductsApi = "http://localhost:3007/api/products";
 
 /* order Api */
 

@@ -104,9 +104,11 @@ export const getCurrentUserThunk = createAsyncThunk("getCurrentUser" , async  ( 
 
 export const updateUserByIdThunk = createAsyncThunk("updateUser" , async  ( updateUser: userType ,{ getState , rejectWithValue, fulfillWithValue, dispatch  }) => {
     try {
+      console.log(updateUser)
     const res = await axios.patch(api.updateUserApi , updateUser);
+    console.log(res.data)
     if( res.status === 200 ) {
-        dispatch(userActions.setUser(res.data))
+        dispatch(userActions.setUser(res.data.data))
     } else return rejectWithValue(res.data.error?.message ?? "Something went wrong")
   } catch(e:any ) { 
     return rejectWithValue(e?.message  ?? "General server error")

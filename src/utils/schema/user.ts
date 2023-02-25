@@ -31,6 +31,6 @@ export type loginUserType = InferType<typeof LoginInputSchema>
 
 export const UserSchema = CreateUserInputSchema.shape({
   _id: id,
-  address: yup.array().of(address).min(0),
+  address: yup.array().of(address).min(0).nullable(),
 })
 export type userType = InferType<typeof UserSchema>
