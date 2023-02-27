@@ -22,7 +22,6 @@ const ProductList = () => {
 
     useEffect(() => {
       dispatch(fetchFilterProducts(filters));
-      dispatch(fetchCart())
     }, [filters])
 
     return <>

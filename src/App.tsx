@@ -8,6 +8,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getCurrentUserThunk } from './store/userSlice';
 import { fetchFilterProducts } from './store/productSlice';
+import { fetchCart, fetchOrders } from './store/orderSlice';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
     if(token) {
       dispatch(getCurrentUserThunk());
       dispatch(fetchFilterProducts(filters))
+      dispatch(fetchCart());
+      dispatch(fetchOrders());
     }
 }, [])
   return (
