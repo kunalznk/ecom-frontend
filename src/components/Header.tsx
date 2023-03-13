@@ -176,7 +176,7 @@ const Header = () => {
                     <a href="wishlist.html"><i className="far fa-heart"></i></a></li>
                   <Link to="/cart" className="has-dropdown">
                     <a className="mini-cart-shop-link"><i className="fas fa-shopping-bag"></i>
-                    <span className={cart?.products.length ? "total-item-round" : ""}>{Boolean(cart?.products.length) ? cart?.products.length : ""}</span>
+                    <span className={cart?.products?.length ? "total-item-round" : ""}>{Boolean(cart?.products?.length) ? cart?.products.length : ""}</span>
                       </a>
                       <span className="js-menu-toggle"></span>
                     <div className="mini-cart">
@@ -202,7 +202,7 @@ const Header = () => {
                           <a className="mini-product__delete-link far fa-trash-alt" onClick={() => dispatch(deleteFromCart({cartId: cart._id , productId: prod._id}))}/>
                         </div>)}
                         </div>
-                        { Boolean(cart?.products.length) ? <div className="mini-product-stat">
+                        { Boolean(cart?.products?.length) ? <div className="mini-product-stat">
                         <div className="mini-total">
 
                           <span className="subtotal-text">SUBTOTAL</span>
@@ -214,8 +214,8 @@ const Header = () => {
 
                           <Link className="mini-link btn--e-transparent-secondary-b-2" to="/cart">VIEW CART</Link></div>
                       </div> : <div className="mini-product-stat">
-                        <div className="mini-action">
-                          <a className="mini-link btn--e-brand-b-2" href="/products">GO TO SHOPPING</a></div>
+                        {/* <div className="mini-action">
+                          <a className="mini-link btn--e-brand-b-2" href="/products">GO TO SHOPPING</a></div> */}
                       </div>}
 
                     </div>
